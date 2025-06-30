@@ -1,0 +1,122 @@
+   body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        nav.flex, .container.flex {
+            flex-wrap: wrap;
+        }
+
+        .leftside, .rightside {
+            flex-direction: column;
+        }
+
+        .rightside {
+            margin-left: auto;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: row;
+            gap: 1rem;
+            padding: 1rem;
+        }
+
+        .left, .right {
+            flex: 1;
+            min-width: 300px;
+        }
+
+        .cardholder {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+            gap: 1rem;
+        }
+
+        .card img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        .musicplayer {
+            width: 100%;
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            background: #121212;
+            color: white;
+            padding: 0.5rem 1rem;
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+        }
+
+        .seekbar {
+            width: 100%;
+            height: 4px;
+            background: gray;
+            position: relative;
+        }
+
+        .circle {
+            width: 10px;
+            height: 10px;
+            background: white;
+            border-radius: 50%;
+            position: absolute;
+            top: -3px;
+            left: 0;
+        }
+
+        @media (max-width: 768px) {
+            .rightside ul, .firstbox ul {
+                flex-direction: column;
+                gap: 0.5rem;
+            }
+            .exx2 a, .secondbox a {
+                font-size: 14px;
+            }
+            .container {
+                flex-direction: column;
+            }
+            .left, .right {
+                width: 100% !important;
+                margin: 5px 0 !important;
+                padding: 10px !important;
+            }
+            .login {
+                width: auto;
+            }
+            .search {
+                width: 100%;
+            }
+            .playbutton {
+                gap: 30px;
+            }
+            nav.flex {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+        }
+
+        @media (max-width: 600px) {
+            .cardholder {
+                grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+                padding: 0 10px;
+            }
+        }
+
+        @media (max-width: 500px) {
+            .musicplayer {
+                height: 90px;
+                flex-direction: column;
+                align-items: stretch;
+                padding: 1rem;
+            }
+
+            .box {
+                flex-direction: column;
+                gap: 10px;
+                align-items: center;
+            }
+        }
